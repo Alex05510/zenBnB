@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" href="style.css">
+    <title>Zenbnb</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="navbar">  
+            <div class="logo"></div>
+            <ul>
+                <li><a href="index.html"><img src="images/images.png" alt="" width="20%" height="20%"></a></li>
+                <li><a href="Paris.html">Paris</li>
+                <li><a href="Lyon.html">Lyon</li>
+                <li><a href="marseille.html">Marseille</a></li>
+                <li><a href="note.html">Les mieux notés</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<main>
+    <h1>Recherchez votre prochaine location de vacances.</h1>
+            <form id="form"> 
+                <label>Nom complet :</label>
+                <input type="text" id="fullname" placeholder="Nom complet">
+            
+                <label>Adresse :</label>
+                <input type="text" id="adress" placeholder="Votre adresse">
+            
+                <label>Email :</label>
+                <input type="email" id="email" placeholder="Adresse email">
+            
+                <label>Téléphone :</label>
+                <input type="tel" id="phone" placeholder="Numéro de téléphone">
+
+            <label>Type de logement :</label>
+            <select id="houseType">
+                <option value="maison">Maison</option>
+                <option value="appartement">Appartement</option>
+                <option value="igloo">Igloo</option>
+            </select>
+            <div id="specificOptions" style="display:none;">
+                <label>Nombre de chambres :</label>
+                <input type="number" id="rooms" min="1" placeholder="Nombre de chambres">
+            </div>
+            
+            <div id="gardenOrPoolOption" style="display:none;">
+                <label>Préférences pour maison :</label>
+                <div>
+                    <input type="checkbox" id="garden" value="jardin"> Jardin
+                    <input type="checkbox" id="pool" value="piscine"> Piscine
+                </div>
+            </div>
+            
+            <div id="balconyOrElevator" style="display:none;">
+                <label>Préférences pour appartement :</label>
+                <div>
+                    <input type="checkbox" id="balcony" value="balcony"> Balcon
+                    <input type="checkbox" id="elevator" value="elevator"> Ascenseur
+                </div>
+            </div>
+            
+        
+            <label>Nombre de personnes :</label>
+            <input type="number" id="people" min="1" placeholder="Nombre de personnes">
+        
+            <label>Date d'arrivée :</label>
+            <input type="date" id="arrivalDate">
+        
+            <label>Date de départ :</label>
+            <input type="date" id="departDate">
+        
+            <label>Services supplémentaires :</label>
+            <div>
+                <input type="checkbox" id="driver" value="chauffeur"> Chauffeur (11€/J) 
+                <input type="checkbox" id="breakfast" value="petit-déjeuner"> Petit-déjeuner (15€/J/Pers)
+                <input type="checkbox" id="guide" value="guide"> Guide (20€, forfait)
+                <input type="checkbox" id="lunch" value="déjeuner">Dejeuner
+            </div>
+        
+            <div id="dietOptions" style="display:none;">
+                <label>Régime alimentaire :</label>
+                <input type="text" id="diet" placeholder="Précisez votre régime">
+            </div>
+            <div class="btn">
+                <button type="submit" id="submitBtn">Réserver</button>
+                <button type="reset" id="resetBtn">rénitialiser</button>
+                <div id="saved-data" style="display: none;"></div>
+            </div>
+                <div id="errors" class="error"></div>
+                <div id="result" class="valid"></div>
+        </form>
+
+        <div class="city">
+            <ul>
+                <li><a href="Paris.html"><img src="city/paris.webp" alt="" width="200px" height="200px"></a></li>
+                <li><a href="Lyon.html"><img src="city/Lyon.jpg" alt="" width="200px" height="200px"></a></li>
+                <li><a href="marseille.html"><img src="city/marseille-skyline.webp" alt="" width="200px" height="200px"></a></li>
+                <li><a href="note.html"><img src="city/icon-256x256.png" alt="" width="200px" height="200px"></a></li>
+            </ul>
+        </div>
+    
+
+<div class="logement">
+        <div class="home">
+            <div class="cards">
+                <img src="images/1e7f1313-a77b-41b5-a393-377db579796a.avif" alt="" width="70%" height="70%">
+                <h3>Pierrefitte-sur-Seine, France</h3>
+                <p><span>Hôte : MinaHôte : Mina</span></p>
+               <p><span>du 2 mai au 27 avr</span></p>
+                <p><strong>73 €</strong> par nuit</p>
+            </div>
+            <div class="cards">
+                <img src="images/7ccdc576-4f8e-4446-9579-d7a601b411c8.avif" alt="" width="70%" height="70%">
+                <h3>Romainville, France</h3>
+                <p><span>Hôte : KarineHôte : Karine</span></p>
+                <p><span>du 7 au 12 avr.</span></p>
+                <p><strong>71 €</strong> par nuit</p>
+            </div>
+            <div class="cards">
+                <img src="images/32a7bd26-f68b-477b-b0a4-7c7dffd772d0.avif" alt="" width="70%" height="70%">
+                <h3>Paris, France</h3>
+                <p><span>À 7 kilomètresÀ 7 kilomètres</span></p>
+                <p><span>du 23 au 28 avr.</span></p>
+                <p><strong>205 €</strong> par nuit</p>
+            </div>
+            <div class="cards">
+                <img src="images/615b05a4-6a52-43fe-b94b-f9b12f9abb9c.avif" alt="" width="70%" height="70%">
+               <h3>Bagneux, France</h3>
+                <p><span>Hôte : HaiyingHôte : Haiying</span></p>
+                <p><span>du 6 au 11 avr.</span></p>
+                <p><strong>417 €</strong> par nuit</p>
+            </div>
+            <div class="cards">
+                <img src="images/9086462a-8c1d-4bd1-8d06-f60fe1964691.avif" alt=""width="70%" height="70%">
+                <h3>Rosny-sous-Bois, France</h3>
+                <p><span>Hôte : JenniferHôte : Jennifer</span></p>
+                <p><span>du 21 au 26 avr.</span></p>
+                <p><strong>203 €</strong> par nuit</p>
+            </div>
+            <div class="cards">
+                <img src="images/21060820-07ba-49b5-aa6f-20cbca470e6e.avif" alt="" width="70%" height="70%">
+                <h3>Alfortville, France</h3>
+                <p>Hôte professionnelHôte professionnel</p>
+                <p>du 1 au 6 mai</p>
+                <p><strong>173 €</strong> par nuit</p>
+            </div>
+            <div class="cards">
+                <img src="images/1e7f1313-a77b-41b5-a393-377db579796a.avif" alt="" width="70%" height="70%">
+                <h3>Pierrefitte-sur-Seine, France</h3>
+                <p><span>Hôte : MinaHôte : Mina</span></p>
+               <p><span>du 2 mai au 27 avr</span></p>
+                <p><strong>73 €</strong> par nuit</p>
+            </div>
+            <div class="cards">
+                <img src="images/7ccdc576-4f8e-4446-9579-d7a601b411c8.avif" alt="" width="70%" height="70%">
+                <h3>Romainville, France</h3>
+                <p><span>Hôte : KarineHôte : Karine</span></p>
+                <p><span>du 7 au 12 avr.</span></p>
+                <p><strong>71 €</strong> par nuit</p>
+            </div>
+            <div class="cards">
+                <img src="images/32a7bd26-f68b-477b-b0a4-7c7dffd772d0.avif" alt="" width="70%" height="70%">
+                <h3>Paris, France</h3>
+                <p><span>À 7 kilomètresÀ 7 kilomètres</span></p>
+                <p><span>du 23 au 28 avr.</span></p>
+                <p><strong>205 €</strong> par nuit</p>
+            </div>
+            <div class="cards">
+                <img src="images/615b05a4-6a52-43fe-b94b-f9b12f9abb9c.avif" alt="" width="70%" height="70%">
+               <h3>Bagneux, France</h3>
+                <p><span>Hôte : HaiyingHôte : Haiying</span></p>
+                <p><span>du 6 au 11 avr.</span></p>
+                <p><strong>417 €</strong> par nuit</p>
+            </div>
+            <div class="cards">
+                <img src="images/9086462a-8c1d-4bd1-8d06-f60fe1964691.avif" alt=""width="70%" height="70%">
+                <h3>Rosny-sous-Bois, France</h3>
+                <p><span>Hôte : JenniferHôte : Jennifer</span></p>
+                <p><span>du 21 au 26 avr.</span></p>
+                <p><strong>203 €</strong> par nuit</p>
+            </div>
+            <div class="cards">
+                <img src="images/21060820-07ba-49b5-aa6f-20cbca470e6e.avif" alt="" width="70%" height="70%">
+                <h3>Alfortville, France</h3>
+                <p>Hôte professionnelHôte professionnel</p>
+                <p>du 1 au 6 mai</p>
+                <p><strong>173 €</strong> par nuit</p>
+            </div>
+    </div>
+</div>
+</body>
+<script src="index.js"></script>
+</html>

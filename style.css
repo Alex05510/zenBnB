@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border: solid 2px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: aliceblue;
+    margin-left: 30%;
+    line-height: 2rem;
+    margin-bottom: 5rem;
+}
+#submitBtn, #resetBtn {
+    width: 49%;
+    margin-right: 0.3rem;
+    padding: 0.3rem;
+    background-color: #ff385c;
+    color: #fff;
+}
+.btn {
+    margin-top: 1rem;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background-color: rgb(255, 255, 255);
+    border-bottom: solid 1px;
+    list-style: none;
+    margin-bottom: 5rem;
+    align-items: center;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+.navbar ul li a:hover {
+    border-bottom: solid 1px #333;
+    padding: 1rem;  
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 40px;
+}
+h2 {
+    text-align: center;
+    line-height: 2rem;
+}
+
+#result {
+    color: green;
+}
+#errors {
+    color: red;
+}
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
+}
+span {
+    color: rgb(122, 122, 122);
+}
+
+.cards {
+    width: 33%;
+    text-align: center;
+}
+.cards img {
+    border-radius: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+#logement h2, p, img {
+    text-align: center;
+}
+
+.city ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.city li:hover {
+ border-bottom: solid 1px #333;
+}
